@@ -42,7 +42,8 @@
               <span class="input-group-btn">
                 <button class="btn btn-default" type="button">节点值</button>
               </span>
-              <input type="text" class="form-control" id="zk_node_data" size="40" readonly>
+              <pre type="text" class="form-control" id="zk_node_data" readonly>
+              </pre>
             </div>
           </li>
           <li class="list-group-item">
@@ -107,7 +108,7 @@ function zkNodeClick(event, treeId, treeNode){
       $('#zk_node_name').val('')
     }
     if (treeNode.data) {
-      $('#zk_node_data').val(treeNode.data)
+      $('#zk_node_data').val(JSON.stringify(treeNode.data,null,2))
     } else {
       $('#zk_node_data').val('')
     }
