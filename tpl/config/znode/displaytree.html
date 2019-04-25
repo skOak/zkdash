@@ -108,7 +108,7 @@ function zkNodeClick(event, treeId, treeNode){
       $('#zk_node_name').val('')
     }
     if (treeNode.data) {
-      $('#zk_node_data').val(treeNode.data)
+      $('#zk_node_data').val(JSON.stringify(JSON.parse(treeNode.data),null,2))
     } else {
       $('#zk_node_data').val('')
     }
