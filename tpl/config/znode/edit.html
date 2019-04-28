@@ -33,7 +33,7 @@
       {% if download_link %}
         <a type="button" class="btn btn-default" href="{{ download_link }}">点击下载节点文件</a>
       {% else %}
-        <textarea class="form-control" type="text" name="data" id="ed_node_data_value" size="25"></textarea>
+        <textarea class="form-control" type="text" name="data" id="ed_node_data_value" size="25">"{{ data }}"</textarea>
       {% end %}
     </div>
    </div>
@@ -61,5 +61,5 @@ $("#ed_node_types").change(function(){
       $("#ed_node_data").html('<input type="file" name="uploadfile">');
     }
 });
-$('#ed_node_data_value').val(JSON.stringify(JSON.parse("{{ data }}"),null,2));
+//$('#ed_node_data_value').val(JSON.stringify(JSON.parse("{{ data }}"),null,2));
 </script>
